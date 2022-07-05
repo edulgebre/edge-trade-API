@@ -1,0 +1,23 @@
+#%RAML 1.0
+title: edge-trade-API
+/trade:
+  post:
+    description: enter data of trade (buy or sale)
+    body:
+      application/json:
+        example:
+          {
+    "index":"NASDAQ",
+    "symbol":"AAPL",
+    "operation":"Buy",
+    "Quantity":20,
+    "type":"equity"
+        }
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+"message":"trades processed succesfully"
+} 
